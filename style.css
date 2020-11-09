@@ -1,0 +1,105 @@
+.container-1{
+   display: flex;
+   align-items:center;
+   justify-content: flex-start;
+  
+
+  
+   
+  
+}
+.contaoner-2-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+.container-2{
+    display: flex;
+    
+    flex-direction: row;
+}
+
+.container-1 div, .container-2 div, .container-3 div,.container-4 div{
+    border: 1px solid black;
+    padding: 10px;
+  
+}
+
+.box-1{
+    flex: 1;
+    order: 3;
+   
+}
+.box-2{
+    flex: 1;
+    order: 2;
+    
+}
+.box-3{
+    flex: 1;
+    order: 1;
+   
+}
+
+/* Greed */
+.container-3{
+    display: grid;
+    grid-template-columns: minmax(250px, 300px) 1fr minmax(250px,300px);
+    grid-template-areas: "box4 box5 box6";
+}
+
+.box-4{
+    grid-area: box4;
+}
+.box-4 img{
+    height: auto;
+    width: 100%;
+}
+.box-5{
+ grid-area: box5;
+}
+.box-6{
+grid-area: box6;
+}
+
+@media(max-width:750px){
+    .box-5{
+        display: none;
+    }
+    .container-3{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "box4 box6";
+    }
+    @media(max-width: 500px){
+        .container-3{
+            grid-template-columns: 1fr;
+            grid-template-areas: "box4"
+                                  "box6";
+        } 
+    }
+}
+
+.container-4{
+    border: 1px dotted black;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 15px;
+    
+}
+.box-7{
+grid-column: 1/1;
+grid-row: 1/1;
+background-image: url(https://data.1freewallpapers.com/download/nature-home-spring-desktop-background-images.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.box-8{
+
+}
+.box-9{
+
+}
+
